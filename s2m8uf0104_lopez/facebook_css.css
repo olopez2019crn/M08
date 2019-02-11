@@ -359,6 +359,11 @@ list-style: none;
   background-color: red;
 }
 
+.entrada li {
+  display: inline;
+  
+}
+
 .entrada ul li {
   display: list-item;
   list-style-image: url(img/icones/like.jpg);
@@ -381,7 +386,7 @@ list-style: none;
 
 .entrada input::after {
   content: "";
-  bac
+
   width: 40px;
   height: 40px;
   position: relative;
@@ -455,6 +460,30 @@ list-style: none;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*version movil*/
       @media only screen and (max-width: 959px) {
         body {
@@ -463,15 +492,23 @@ list-style: none;
           background-color: #FFF;
           font-family: LucidaGrande;
           overflow-x: hidden;
-        }
-
-        #barra {
 
         }
-        #contingut {
 
+        #barra{
+          height: 44px;
+          background-color: #3a5ca9;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 50;
+        }
+
+        #nom {
 
         }
+
         #cap {
           background-image: url(img/evolucion.png);
             width: 100%;
@@ -481,13 +518,62 @@ list-style: none;
             background-repeat: no-repeat;
         }
 
+
+        #cap img{
+          position: relative;
+          z-index: 49;
+          top: 20px;
+          left: 21px;
+          border-radius: 50%;
+          border: solid 4px white;
+          box-shadow: 2px 2px 5px black;
+        }
+        #cap h2{
+          position: relative;
+          z-index: 50;
+          top: 150px;
+          left: 250px;
+          color: white;
+          font-family: 'Lucida Grande', Tahoma, segoe UI, San Francisco, Roboto;
+          text-shadow: 2px 2px 5px black;
+        }
+        #cap ul li{
+          list-style: none;
+          height: 100%;
+          border-right: solid lightgrey 1px;
+          float: left;
+          padding: 0 20px 0 20px;
+          position: relative;
+          left: 21%;
+          line-height: 43px;
+          font-family: LucidaGrande;
+        }
+        #cap ul{
+          background-color: white;
+          position: relative;
+          top: -33px;
+          height: 43px;
+          border: 1px solid #DDD;
+          border-radius: 3px;
+        }
+
         #contenedor #cap {
           height: 254px;
           background-image: url(img/evolucion.png);
           background-repeat: no-repeat;
           background-size: 100% auto;
           text-align: center;
-          
+
+        }
+
+        #amistats {
+          display: none;
+          list-style-type: none;
+        }
+
+        #image, #fotografies {
+          display: none;
+          list-style-type: none;
         }
 
 
@@ -529,8 +615,13 @@ list-style: none;
         }
 
         .dreta {
-
-
+          width: 100%;
+          float: none;
+          clear: none;
+          padding: 12px;
+          background-color: ;
+          margin-bottom: 30px;
+          box-shadow: 5px 5px 5px grey;
         }
 
         .esquerra, .dreta {
@@ -549,178 +640,197 @@ list-style: none;
           margin: 0 auto;
         }
 
-        #amistats {
-
+        #amistats a:link {
+          color: white;
+          text-decoration: none;
+          position: absolute;
+          bottom: 0;
         }
 
-        #presentacio, #amistats, #fotos {
-
+        #amistats a:visited {
+          color: white;
+          text-decoration: none;
         }
 
-        #seccions h3 {
 
+        #publicacio ul li{
+          padding: 0 40px 0 20px;
+          font-size: 14px;
+          align-items: center;
+          position: relative;
+          list-style: none;
+          float: left;
         }
 
-        #presentacio p {
-
-
+        #pensant p{
+          align-items: center;
+          padding: 0 40px 0 20px;
         }
-
-        #presentacio h3 {
-
-        }
-
-        #amistats h3 {
-
-        }
-
-        #surprise h3 {
-
-        }
-
-        #presentacio .estudis {
-
-
-        }
-
-        #presentacio .domicili {
-
-
-        }
-
-        #presentacio .sentimental {
-
-        }
-
-        #amistats ul li {
-
-
-        }
-
-        a: hover {
-
-        }
-
-        #yaiza {
-        background-image: url(img/yaiza.jpg)
-        }
-
-        #oriol {
-        background-image: url(img/oriol.png)
-        }
-
-        #noe {
-        background-image: url(img/aaron.jpg)
-        }
-
-        #nacho {
-        background-image: url(img/nacho.jpg)
-        }
-
-        #mario {
-        background-image: url(img/mario.jpg)
-        }
-
-        #vic {
-        background-image: url(img/vic.png)
-        }
-
-        #patri {
-        background-image: url(img/patri.gif)
-        }
-
-        #patri {
-        background-image: url(img/patri.gif)
-        }
-
-        #steeven {
-        background-image: url(img/steeven.jpg)
-        }
-
 
         #crear {
-
-
-        }
-
-        #estat #crear li{
-
-        }
-
-        #pensar {
-
-
-        }
-
-        #botonera_estat {
-
-        }
-
-        #botonera_estat li {
-
-        }
-
-        #estat_fotovideo {
-
-        }
-
-        #estat_etiquetar {
-
-        }
-
-        #estat_sentimiento {
-
-        }
-
-        #botonera_estat li:hover {
-
-        }
-        #publica {
-
-        }
-
-        #publica_foto {
-
-        }
-
-        #publica_video {
-
-        }
-
-        #publica_aconteixement {
+          width: 100%;
+          padding: 12px;
+          height: 38px;
+          background-color: #f5f5f7;
+          margin: 0;
 
         }
 
         #crear li {
+          list-style: none;
+          height: 38px;
+          margin: 0 0 0 1px;
+          font-size: 12px;
+          line-height: 48px;
+          float: left;
+          background-color: white;
+          text-indent: 24px;
+        }
+
+        #pensament {
+          display: block;
+          clear: left;
+          padding: 12px;
+          width: 80%;
+          margin-left: 15px;
+          border: 0;
+        }
+
+        #publica {
+          background-image: url(img/btnl.jpg);
+          background-repeat: no-repeat;
+          background-position: 4px 13px;
+        }
+
+        #pujafoto {
+          background-image: url(img/btnc.jpg);
+          background-repeat: no-repeat;
+          background-position: 4px 13px;
+        }
+
+        #pujavideo {
+          background-image: url(img/btnv.jpg);
+          background-repeat: no-repeat;
+          background-position: 4px 13px;
+        }
+
+        #aconteixement {
+          background-image: url(img/btnb.jpg);
+          background-repeat: no-repeat;
+          background-position: 4px 13px;
+        }
+
+        #botonera_estat {
+          height: 40px;
+          width: 490px;
+          float: left;
+          background-color: #f5f5f7;
+          padding: 12px;
+          margin: 0;
+          top: 0;
+          left: 0;
+          position: relative;
+          width: 95%;
+        }
+
+        #botonera_estat li {
+          list-style: none;
+          height: 40px;
+          margin: 0 0 0 1px;
+          background-position: 4px 13px;
+          font-size: 12px;
+          line-height: 48px;
+          float: left;
+          background-color: white;
+          text-indent: 34px;
+        }
+
+        #estat_fotovideo {
+          background-image: url(img/smile.jpg);
+          background-repeat: no-repeat;
+        }
+
+        #estat_etiquetar {
+          background-image: url(img/vistes.jpg);
+          background-repeat: no-repeat;
+        }
+
+        #estat_sentiment {
+          background-image: url(img/persona.jpg);
+          background-repeat: no-repeat;
+        }
+
+        #estat_mes {
 
         }
 
-        .entrada h4 {
+        #botonera_estat li:hover{
 
         }
 
-        .entrada h5 span {
-
-        }
-
-        .entrada h5 {
-
+        #image ul li{
+        width: 82px;
+        height: 82px;
+        background-color: red;
+        float: left;
+        margin: 2px;
+        position: relative;
+        list-style: none;
         }
 
         .entrada h6 {
-
+          text-indent: 20px;
+          background-image: url(img/like.jpg);
+          border-bottom: 1px solid grey;
         }
 
         .entrada ul {
+          width: 100%;
+          overflow: hidden;
+          height: 40px;
+          overflow: hidden;
+          padding: 0 12px;
+          background-color: red;
 
         }
 
-        .entrada ul li {
+        .entrada li {
+          display: inline;
+          list-style-type: none;
+          overflow: hidden;
+        }
 
+
+        .entrada ul li {
+          display: inline;
+          list-style-type: none;
+          list-style-image: url(img/icones/like.jpg);
+          float: left;
+          margin-left:
+        }
+
+        .entrada input {
+          display: block;
+          clear: both;
+          background-color: #e9ebed;
+          border: solid grey 1px;
+          border-radius: 24px;
+          line-height: 2em;
+          padding: 8px;
+          font-size: 1.5em;
+          margin-left: 60px;
+          width: 87%;
         }
 
         .entrada input::after {
+          content: "";
 
+          width: 40px;
+          height: 40px;
+          position: relative;
+          top: -50px;
+          left: -50px;
+          z-index: 4000;
         }
 
         #like {
