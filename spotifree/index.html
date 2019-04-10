@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css.css">
-  <link rel="stylesheet" href="play.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc025B46JvROS7bZs3I02EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="css/play.css">
   <title>World Music</title>
 </head>
 <body>
+
+
 
   <div id="barra">. <img id="destacat" src="img/logo.png"></div>
   <div class="greenline"></div>
@@ -17,10 +20,11 @@
 
   <div id="menu">
     <ul>
-      <li class="colormenu">Descubre</li>
-      <li class="colormenu">Canciones</li>
+      <li>Buscar:</li><input id="inputado" type="search"></input>
+      <li class="colormenu">Inicio</li>
+      <a href="descubre.html"><li class="colormenu">Descubre</li></a>
+      <a href="lista.html"><li class="colormenu">Lista de reproducción</li></a>
       <li class="colormenu">Favoritos</li>
-      <li class="colormenu">Archivos Locales</li>
     </ul>
   </div>
 
@@ -71,7 +75,7 @@
     <h4 id="songArtist">Song Artist</h4>
           <div id="btns">
             <button id="backward" onclick="pre()"><i class="fas fa-backward"></i></button>
-            <button id="play" onclick="playPause()"><i class="fas fa-pause"></i></button>
+            <button id="playPause" onclick="playPause()"><i class="fas fa-pause"></i></button>
             <button id="forward" onclick="next()"><i class="fas fa-forward"></i></button>
           </div>
 
@@ -84,6 +88,20 @@
     </div>
   </div>
 
+
+
+  <div id="bars">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
 
 
 
@@ -112,26 +130,34 @@
     window.onload = playSong;
 
 
-    function playSong(){
+      function playSong(){
       song.src = songs[currentSong];
       songName.textContent = songNames[currentSong];
       songArtist.textContent = artist[currentSong];
       song.play();
     }
 
+
+
     function playPause(){
-      if(song.paused){
-        song.play();
-        $("#play i").removeClass("fa-play").addClass("fa-pause");
-      }
-      else {
-        song.pause();
-        $("#play i").removeClass("fa-pause").addClass("fa-play");
-      }
-    }
+          if(song.paused){
+            song.play();
+            $("#playPause i").removeClass("fa-play").addClass("fa-pause");
+          }
+          else {
+            song.pause();
+            $("#playPause i").removeClass("fa-pause").addClass("fa-play");
+          }
+        }
+
+
+
+
+
 
     song.addEventListener('timeupdate', function(){
       var position = song.currentTime / song.duration;
+      expandingBar.style.width = position * 100 + '%';
       convertTime(Math.round(song.currentTime));
       if(song.ended){
         next();
@@ -165,7 +191,7 @@
         currentSong = 0;
       }
       playSong();
-        $("#play i").removeClass("fa-play").addClass("fa-pause");
+        $("#playPause i").removeClass("fa-play").addClass("fa-pause");
         $("#container-top img").attr("src",poster[currentSong]);
       }
 
@@ -175,7 +201,7 @@
           currentSong = 2;
         }
         playSong();
-        $("#play i").removeClass("fa-play").addClass("fa-pause");
+        $("#playPause i").removeClass("fa-play").addClass("fa-pause");
         $("#container-top img").attr("src",poster[currentSong]);
       }
 
@@ -186,11 +212,3 @@
 
 </body>
 </html>
-
-
-<!--
-<audio controls="controls">
-  <source src="track.ogg" type="audio/ogg"> FIREFOX
-  <source src="track.mp3" type="audio/mpeg">
-</audio>
--->

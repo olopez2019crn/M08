@@ -1,0 +1,249 @@
+@media only screen and (min-width: 960px){
+
+h3 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  color: #666;
+  font-weight: 300;
+}
+
+#container {
+  width: 400px;
+  position: relative;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.);
+  border-radius: 14px;
+}
+
+#container-top {
+  width: 400px;
+}
+
+#container-top img{
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  width: 400px;
+}
+
+#container-bottom {
+  width: 360px;
+  padding: 10px 20px 20px 20px;
+}
+
+#btns {
+  margin: 40px 0 10px 0;
+  width: 200px;
+  float: left;
+
+}
+
+#playPause, #backward, #forward {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 26px;
+  background: none;
+  margin: 10px;
+  position: relative;
+  color: #009640;
+}
+
+#play {
+  top: 0;
+  left: 0;
+}
+
+#play img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+}
+
+#backward img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#forward img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#timeNow {
+  margin: 40px 0 10px 0;
+  width: 160px;
+  float: left;
+  text-align: right;
+  line-height: 16px;
+  font-size: 16px;
+  padding-top: 14px;
+  color: white;
+}
+
+#durationBar {
+  width: 360px;
+  height: 10px;
+  background: #333;
+  display: flex;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3) 0  3px 10px 0 rgba(0,0,0,0.3);
+}
+
+#expandingBar {
+  height: 10px;
+  background-color: #009640;
+}
+
+#movingBar {
+  width: 10px;
+  height: 10px;
+  background-color: #ecedef;
+}
+
+#songArtist {
+  color: #009640
+}
+}
+
+
+@media only screen and (max-width: 960px){
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    font-weight: 300;
+  }
+
+  #container {
+    width: 100%;
+    position: relative;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.);
+    border-radius: 14px;
+    height: 350px;
+    position: relative;
+  }
+
+  #container-top {
+    width: 200px;
+  }
+
+  #container-top img{
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    width: 400px;
+  }
+
+  #container-bottom {
+    width: 360px;
+    padding: 10px 20px 20px 20px;
+  }
+
+  #btns {
+    margin: 40px 0 10px 0;
+    width: 200px;
+    float: left;
+
+  }
+
+  #playPause, #backward, #forward {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 26px;
+    background: none;
+    margin: 10px;
+    position: relative;
+    color: #009640;
+  }
+
+  #play {
+    top: 0;
+    left: 0;
+  }
+
+  #play img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+  }
+
+  #backward img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #forward img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #timeNow {
+    margin: 40px 0 10px 0;
+    width: 160px;
+    float: left;
+    text-align: right;
+    line-height: 16px;
+    font-size: 16px;
+    padding-top: 14px;
+    color: white;
+    margin-left: -60px;
+  }
+
+  #durationBar {
+    width: 300px;
+    height: 10px;
+    background: #333;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3) 0  3px 10px 0 rgba(0,0,0,0.3);
+  }
+
+  #expandingBar {
+    height: 10px;
+    background-color: #009640;
+  }
+
+  #movingBar {
+    width: 10px;
+    height: 10px;
+    background-color: #ecedef;
+  }
+
+  #songArtist {
+    color: #009640
+  }
+  }

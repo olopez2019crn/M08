@@ -1,0 +1,22 @@
+
+
+#general {
+  width: 640px;
+  margin: 0 auto;
+}
+
+
+.music {
+  
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+  float: left;
+
+}
+
+.music img {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}

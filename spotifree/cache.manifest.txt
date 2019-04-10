@@ -1,0 +1,6 @@
+index.html
+img/*
+img/desc/*
+img/icon/*
+music/*
+css/*
